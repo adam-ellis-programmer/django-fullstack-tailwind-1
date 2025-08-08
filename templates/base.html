@@ -1,0 +1,53 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Django + Tailwind{% endblock %}</title>
+    {% tailwind_css %}
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="{% url 'core:home' %}" class="text-white text-xl font-bold"
+              >Django App</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="{% url 'core:home' %}"
+              class="text-white hover:text-blue-200 px-3 py-2 rounded-md"
+              >Home</a
+            >
+            <a
+              href="{% url 'core:about' %}"
+              class="text-white hover:text-blue-200 px-3 py-2 rounded-md"
+              >About</a
+            >
+            <a
+              href="{% url 'core:contact' %}"
+              class="text-white hover:text-blue-200 px-3 py-2 rounded-md"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-6 px-4">
+      {% block content %} {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-auto">
+      <div class="max-w-7xl mx-auto py-4 px-4 text-center">
+        <p>&copy; 2025 Django + Tailwind Test App</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %}About - Django + Tailwind{% endblock %}
+<!--  -->
+{% block content %}
+<div class="max-w-4xl mx-auto">
+  <h1 class="text-4xl font-bold text-gray-900 mb-6">About This Project</h1>
+
+  <div class="bg-white rounded-lg shadow-md p-8 mb-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Technology Stack</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-lg font-medium text-blue-600 mb-2">Backend</h3>
+        <ul class="text-gray-600 space-y-1">
+          <li>• Django 5.0.1</li>
+          <li>• PostgreSQL</li>
+          <li>• Docker & Docker Compose</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-green-600 mb-2">Frontend</h3>
+        <ul class="text-gray-600 space-y-1">
+          <li>• Tailwind CSS 3.6.0</li>
+          <li>• Django Templates</li>
+          <li>• Hot Reload Development</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
+    <h3 class="text-lg font-medium text-blue-800 mb-2">Features</h3>
+    <p class="text-blue-700">
+      This setup demonstrates a modern Django development environment with
+      Tailwind CSS integration, containerized with Docker for consistent
+      development across different machines.
+    </p>
+  </div>
+
+  <div class="text-center">
+    <a
+      href="{% url 'core:home' %}"
+      class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-4"
+    >
+      Back to Home
+    </a>
+    <a
+      href="{% url 'core:contact' %}"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Contact Us
+    </a>
+  </div>
+</div>
+{% endblock %}

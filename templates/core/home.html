@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %}Home - Django + Tailwind{% endblock %}
+<!--  -->
+{% block content %}
+<div class="text-center">
+  <h1 class="text-4xl font-bold text-rose-500 mb-4">
+    Welcome to Django + Tailwind!
+  </h1>
+  <p class="text-xl text-gray-600 mb-8">
+    Testing Tailwind CSS integration with Django
+  </p>
+  <!--  -->
+  <!-- Tailwind Test Components -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="text-blue-500 text-3xl mb-4">🚀</div>
+      <h3 class="text-lg font-semibold mb-2">Fast Setup</h3>
+      <p class="text-gray-600">
+        Django + Docker + Tailwind configured and ready to go!
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="text-green-500 text-3xl mb-4">💡</div>
+      <h3 class="text-lg font-semibold mb-2">Modern UI</h3>
+      <p class="text-gray-600">
+        Beautiful, responsive design with Tailwind CSS utilities.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="text-purple-500 text-3xl mb-4">⚡</div>
+      <h3 class="text-lg font-semibold mb-2">Hot Reload</h3>
+      <p class="text-gray-600">
+        Automatic CSS compilation and browser refresh.
+      </p>
+    </div>
+  </div>
+
+  <!-- Button Test -->
+  <div class="mt-8">
+    <a
+      href="{% url 'core:about' %}"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+    >
+      Learn More
+    </a>
+  </div>
+</div>
+{% endblock %}
